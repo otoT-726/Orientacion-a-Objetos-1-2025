@@ -4,45 +4,42 @@ package ar.edu.unlp.oo1.ejercicio1;
  * Completar esta clase de acuerdo a lo especificado
  */
 public class WallPost {
+	
+	private String text;
+	private int likes;
+	private boolean destacado;
 
-	/**
-	 * Retorna el texto descriptivo de la publicación
-	 * 
-	 * @return
-	 */
+	public WallPost() {
+		this.text = "Undefined post";
+		this.likes = 0;
+		this.destacado = false;
+	}
+	
 	String getText() {
-		return null;
+		return this.text;
 	};
 
-	/**
-	 * Setea el texto descriptivo de la publicación
-	 * @param text
-	 */
 	void setText(String text) {
-		
+		this.text = text;
 	};
 
-	/**
-	 * Retorna la cantidad de “me gusta”
-	 * 
-	 * @return
-	 */
 	int getLikes() {
-		return 0;
+		return this.likes;
 	};
 
 	/**
 	 * Incrementa la cantidad de likes en uno
 	 */
 	void like() {
-		
+		this.likes += 1;
 	};
 
 	/**
 	 * Decrementa la cantidad de likes en uno. Si ya es 0, no hace nada
 	 */
 	void dislike() {
-		
+		if(this.getLikes() > 0)
+			this.likes--;
 	};
 
 	/**
@@ -51,14 +48,14 @@ public class WallPost {
 	 * @return
 	 */
 	boolean isFeatured() {
-		return false;
+		return this.destacado;
 	};
 
 	/**
 	 * Cambia el post del estado destacado a no destacado y viceversa
 	 */
 	void toggleFeatured() {
-		
+		this.destacado = !this.destacado;
 	};
 
 	/*
