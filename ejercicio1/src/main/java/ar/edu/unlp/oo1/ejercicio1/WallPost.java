@@ -63,11 +63,11 @@ public class WallPost {
 	 */
 	@Override
 	public String toString() {
-		return "WallPost {" +
+		return "WallPost " +
 			"text: " + getText() +
 			", likes: '" + getLikes() + "'" +
 			", featured: '" + isFeatured() + "'" +
-			"}";
+			"";
 	}
 
 }
