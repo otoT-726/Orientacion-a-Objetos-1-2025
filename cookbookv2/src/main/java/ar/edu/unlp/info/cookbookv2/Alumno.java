@@ -1,5 +1,5 @@
 package ar.edu.unlp.info.cookbookv2;
-
+import java.time.LocalDate;
 import java.util.List;
 
 public class Alumno {
@@ -65,4 +65,9 @@ public class Alumno {
 				.filter(examen -> examen.rendidoElAnio(anio))
 				.count();
 	}
+	
+	public static void main(String[]args) {
+		System.out.println(LocalDate.now());
+	}
 }
+
