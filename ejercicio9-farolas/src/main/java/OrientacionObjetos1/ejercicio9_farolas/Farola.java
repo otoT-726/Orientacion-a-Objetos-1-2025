@@ -32,7 +32,6 @@ public class Farola {
 		this.estado = estado;
 	}
 	
-	
 	private void prenderApagar(Boolean bool) {
 		this.setEstado(bool);
 		for(Farola f: this.getVecinas()) {
@@ -56,7 +55,4 @@ public class Farola {
 	public boolean isOff() {
 		return !this.getEstado();
 	}
-	
-	
-	
 }
