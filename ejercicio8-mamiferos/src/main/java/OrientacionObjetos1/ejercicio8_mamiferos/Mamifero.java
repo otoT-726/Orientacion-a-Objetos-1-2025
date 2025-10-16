@@ -69,8 +69,6 @@ public class Mamifero {
 	
 	
 	public Boolean tieneComoAncestroA(Mamifero unMamifero) {
-		if(this == null)
-			return false;
 		if(this.getPadre() != null && this.getPadre().equals(unMamifero))
 			return true;
 		if(this.getMadre() != null && this.getMadre().equals(unMamifero))

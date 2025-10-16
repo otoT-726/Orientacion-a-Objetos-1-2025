@@ -19,37 +19,52 @@ public class Farola {
 		return this.vecinas;
 	}
 	
+	public boolean getEstado() {
+		return this.estado;
+	}
+	private void setEstado(Boolean estado) {
+		this.estado = estado;
+	}	
+	
 	public void pairWithNeighbor(Farola otraFarola) {
 		if(!this.vecinas.contains(otraFarola)) {
 			this.agregarVecina(otraFarola);
 			otraFarola.agregarVecina(this);
 		}
 	}
-	public Boolean getEstado() {
-		return this.estado;
-	}
-	public void setEstado(Boolean estado) {
-		this.estado = estado;
-	}
 	
+<<<<<<< HEAD
 	private void prenderApagar(Boolean bool) {
 		this.setEstado(bool);
 		for(Farola f: this.getVecinas()) {
 			f.setEstado(bool);
+=======
+//	private void prenderApagar(Boolean bool) {
+//		this.setEstado(bool);
+//		for(Farola f: this.getVecinas()) {
+//			f.setEstado(bool);
+//		}
+//	}
+	
+	public void turnOn() {
+		if(this.isOff()) {
+			this.estado = true;
+			for(Farola f: this.vecinas){
+				f.turnOn();
+			}
+>>>>>>> 506877e7d792722c9c5b41e73fa87057b43d83f4
 		}
 	}
 	
-	public void turnOn() {
-		if(this.isOff()) 
-			this.prenderApagar(true);
-	}
-	
 	public void turnOff() {
-		if(this.isOn())
-			this.prenderApagar(false);
+		if(this.isOn()) {
+			this.estado = false;
+			for(Farola f: this.vecinas)
+				f.turnOff();
+		}
 	}
 	
-	public Boolean isOn() {
+	public boolean isOn() {
 		return this.getEstado();
 	}
 	public boolean isOff() {
