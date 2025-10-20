@@ -33,12 +33,6 @@ public class Farola {
 		}
 	}
 	
-<<<<<<< HEAD
-	private void prenderApagar(Boolean bool) {
-		this.setEstado(bool);
-		for(Farola f: this.getVecinas()) {
-			f.setEstado(bool);
-=======
 //	private void prenderApagar(Boolean bool) {
 //		this.setEstado(bool);
 //		for(Farola f: this.getVecinas()) {
@@ -52,7 +46,6 @@ public class Farola {
 			for(Farola f: this.vecinas){
 				f.turnOn();
 			}
->>>>>>> 506877e7d792722c9c5b41e73fa87057b43d83f4
 		}
 	}
 	

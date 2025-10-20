@@ -6,7 +6,7 @@ public class InversionEnPlazoFijo extends Inversion{
 	private Double interes;
 	
 	
-	public InversionEnPlazoFijo(Double montoDepositado, Double interes) {
+	public InversionEnPlazoFijo(double montoDepositado, double interes) {
 		this.montoDepositado = montoDepositado;
 		this.fechaDeposito = LocalDate.now();
 		this.interes = interes;

@@ -5,7 +5,7 @@ public class InversionEnAccion extends Inversion {
 	private Double valorUnitario;
 	private Integer cantidad;
 	
-	public InversionEnAccion(String nombre, Double valorUnitario, Integer cantidad) {
+	public InversionEnAccion(String nombre, double valorUnitario, Integer cantidad) {
 		this.nombre = nombre;
 		this.valorUnitario = valorUnitario;
 		this.cantidad = cantidad;
