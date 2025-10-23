@@ -28,4 +28,12 @@ public class DateLapse {
 	public boolean includesDate(LocalDate fecha) {
 		return fecha.isAfter(this.getFrom()) && fecha.isBefore(this.getTo()) || fecha.isEqual(getFrom()) || fecha.isEqual(getTo());
 	}
+	
+	public boolean overlaps(DateLapse otroDateLapse) {
+		for(int i = 0; i < otroDateLapse.sizeInDays(); i++) {
+			if(this.includesDate(otroDateLapse.getFrom().plusDays(i)))
+				return true;
+		}
+		return false;
+	}
 }
