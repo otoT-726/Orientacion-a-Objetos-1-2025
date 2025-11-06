@@ -1,0 +1,38 @@
+package OrientacionObjetos1.ejercicio21_EnvioDePaquetes;
+
+import java.time.LocalDate;
+import java.util.LinkedList;
+import OrientacionObjetos1.ejercicio16_DateLapse.DateLapse;
+
+public abstract class Cliente {
+
+	private String nombre;
+	private String direccion;
+	private String identificador;
+	private LinkedList<Envio> envios;
+	
+	public Cliente(String nombre, String direccion, String identificador) {
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.identificador = identificador;
+		envios = new LinkedList<Envio>();
+	}
+	
+	public boolean agregarEnvio(Envio envio) {
+		if(envios.add(envio))
+			return true;
+		return false;
+	}
+	
+	
+	public double calcularCosto(LocalDate inicio, LocalDate fin) {
+		double total = 0;
+		DateLapse lapso = new DateLapse(inicio, fin);
+		for(Envio envio: envios) {
+			if(lapso.includesDate(envio.getFechaDespacho())) {
+				total += envio.calcularCosto();
+			}
+		}
+		return total;
+	}
+}

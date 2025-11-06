@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>OrientacionObjetos1</groupId>
-  <artifactId>ejercicio19-AlquilerDePropiedades</artifactId>
+  <artifactId>ejercicio21-EnvioDePaquetes</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>ejercicio19-AlquilerDePropiedades-objetos</name>
+  <name>ejercicio21-EnvioDePaquetes-objetos</name>
   <description>Este arquetipo es usado para objetos I y II</description>
 
   <licenses>
@@ -48,7 +48,7 @@
     </dependency>
     <dependency>
     	<groupId>OrientacionObjetos1</groupId>
-    	<artifactId>ejercicio17-DateLapse2</artifactId>
+    	<artifactId>ejercicio16-DateLapse</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
