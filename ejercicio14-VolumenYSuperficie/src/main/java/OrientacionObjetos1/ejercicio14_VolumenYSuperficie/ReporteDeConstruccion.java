@@ -14,22 +14,20 @@ public class ReporteDeConstruccion {
 	}
 	
 	public double volumenDeMaterial(String nombreDeMaterial) {
-		double total = 0;
-		for(Pieza p: piezas) {
-			if(p.getMaterial().equals(nombreDeMaterial))
-				total += p.calcularVolumen();
-		}
-		return total;
+		return this.piezas.stream().
+				filter(p ->p.getMaterial().
+				equals(nombreDeMaterial)).
+				mapToDouble(p -> p.calcularVolumen()).
+				sum();
 	}
 	
 	public double superficieDeColor(String color) {
-		double total = 0;
-		for(Pieza p: piezas) {
-			if(p.getColor().equals(color))
-				total += p.calcularSuperficie();
+		return this.piezas.stream().
+				filter(p -> p.getColor().
+				equals(color)).
+				mapToDouble(p -> p.calcularSuperficie()).
+				sum();
 		}
-		return total;
-	}
 	
 //	public static void main(String[]args) {
 //		ReporteDeConstruccion reporte = new ReporteDeConstruccion();

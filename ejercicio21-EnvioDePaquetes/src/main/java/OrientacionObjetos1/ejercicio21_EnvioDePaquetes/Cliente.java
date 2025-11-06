@@ -26,13 +26,10 @@ public abstract class Cliente {
 	
 	
 	public double calcularCosto(LocalDate inicio, LocalDate fin) {
-		double total = 0;
 		DateLapse lapso = new DateLapse(inicio, fin);
-		for(Envio envio: envios) {
-			if(lapso.includesDate(envio.getFechaDespacho())) {
-				total += envio.calcularCosto();
-			}
-		}
-		return total;
+		return this.envios.stream().
+					filter(e -> lapso.includesDate(e.getFechaDespacho())).
+					mapToDouble(e -> e.calcularCosto()).
+					sum();
 	}
 }

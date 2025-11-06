@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 
 
 public class EvenNumberSetTest {
@@ -26,7 +26,7 @@ public class EvenNumberSetTest {
 		set.add(4);
 		set.add(6);
 		
-		Set<Integer> set2 = new LinkedHashSet<>();
+		Set<Integer> set2 = new HashSet<>();
 		set2.add(4);
 		set2.add(6);
 		assertEquals(set, set2);

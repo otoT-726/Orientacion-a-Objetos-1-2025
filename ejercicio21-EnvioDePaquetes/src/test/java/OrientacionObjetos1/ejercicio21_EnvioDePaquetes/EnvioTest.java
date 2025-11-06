@@ -16,7 +16,7 @@ public class EnvioTest {
 	
 	@BeforeEach
 	public void setUp() {
-		clientePersona = new ClienteFisico("Aime", "56, 726", "46749858");
+		clientePersona = new ClienteFisico("marcos", "56, 726", "46749858");
 		clienteEmpresa = new ClienteCorporativo("Personal", "Corrientes 1100", "992938838821");
 		LocalDate fecha1 = LocalDate.of(2025, 11, 1);
 		LocalDate fecha2 = LocalDate.of(2025, 11, 2);

@@ -62,6 +62,7 @@ public class JobSchedulerTest {
     void testUnschedule() {
         JobScheduler aScheduler = new HighestPriorityJobScheduler();
         this.scheduleJobsIn(aScheduler);
+        assertTrue(aScheduler.getJobs().contains(highestPriorityJob));        
         aScheduler.unschedule(highestPriorityJob);
         assertFalse(aScheduler.getJobs().contains(highestPriorityJob));
     }

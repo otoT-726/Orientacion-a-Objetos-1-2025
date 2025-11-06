@@ -1,7 +1,7 @@
 package OrientacionObjetos1.ejercicio18_EvenNumberSet;
 
 import java.util.Set;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -9,14 +9,18 @@ import java.util.Iterator;
 
 public class EvenNumberSet implements Set<Integer> {
 	
-	ArrayList<Integer> lista;
+	private Set<Integer> lista;
+	
+	public EvenNumberSet() {
+		this.lista = new HashSet<Integer>();
+	}
 	
 	public int size() {
 		return lista.size();
 	}
 	
 	public boolean add(Integer num) {
-		if(num % 2 == 0 && !lista.contains(num)) {
+		if(num % 2 == 0) {
 			lista.add(num);
 			return true;
 		}
@@ -91,13 +95,34 @@ public class EvenNumberSet implements Set<Integer> {
 
 	@Override
 	public boolean removeAll(Collection<?> c) {
-		
-		return false;
+		for(Object n: c) {
+			lista.remove(n);
+		}
+		return true;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		for(Integer n: lista) {
+			lista.remove(n);
+		}
+	}
+	
+	public String toString() {
+		return this.lista.toString();
+	}
+	
+	public static void main(String[]args) {
+		Set<Integer> set = new EvenNumberSet();
+		set.add(1);
+		set.add(4);
+		set.add(5);
+		set.add(4);
+		set.add(6);
+		System.out.println(set);
+		Set<Integer> set2 = new HashSet<>();
+		set2.add(4);
+		set2.add(6);
+		System.out.println(set2);
 	}
 }

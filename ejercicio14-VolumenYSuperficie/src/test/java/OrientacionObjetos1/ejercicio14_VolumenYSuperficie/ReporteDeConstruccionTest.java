@@ -27,11 +27,11 @@ public class ReporteDeConstruccionTest {
 	
 	@Test
 	public void volumenDeMaterialTest() {
-		assertEquals(reporte.volumenDeMaterial("Hierro"), ((4/3)*Math.PI * Math.pow(esfera.getRadio(), 3) + (prisma.getLadoMayor() * prisma.getLadoMenor() * prisma.getAltura())));
+		assertEquals(reporte.volumenDeMaterial("Hierro"), ((4/3)*Math.PI * Math.pow(esfera.getRadio(), 3) + (prisma.getLadoMayor() * prisma.getLadoMenor() * prisma.getAltura())), 0.01);
 	}
 	
 	@Test
 	public void superficieDeColorTest() {
-		assertEquals(reporte.superficieDeColor("Rojo"), (4* Math.PI * Math.pow(esfera.getRadio(), 2)) + ((2*Math.PI * cilindro.getRadio() * cilindro.getH() + 2 * Math.PI * Math.pow(cilindro.getRadio(), 2))));
+		assertEquals(reporte.superficieDeColor("Rojo"), (4* Math.PI * Math.pow(esfera.getRadio(), 2)) + ((2*Math.PI * cilindro.getRadio() * cilindro.getH() + 2 * Math.PI * Math.pow(cilindro.getRadio(), 2))), 0.01);
 	}
 }

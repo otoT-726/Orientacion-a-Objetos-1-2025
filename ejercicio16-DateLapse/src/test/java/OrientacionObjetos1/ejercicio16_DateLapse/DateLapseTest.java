@@ -14,7 +14,7 @@ public class DateLapseTest {
 	
 	@BeforeEach
 	public void setUp() {
-		hoy = LocalDate.now();
+		hoy = LocalDate.of(2025, 10, 18);
 		ayer = LocalDate.of(2025, 10, 17);
 		mañana = LocalDate.of(2025, 10, 19);
 		lapso = new DateLapse(ayer, mañana);
